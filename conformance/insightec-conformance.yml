@@ -1,0 +1,34 @@
+generated: '2026-08-04'
+method: searched
+source: https://insightec.com/compliance-ethics/
+note: >-
+  Insightec is a medical device manufacturer with no public API, so the usual
+  API/protocol conformance axis (OAuth2, OIDC, RFC 9457, JSON:API, pagination,
+  idempotency) is not applicable — there is no machine-readable contract to
+  assert against. What the company does publish is an industry compliance and
+  ethics program, captured below.
+standards:
+- id: advamed-code-of-ethics
+  conforms: true
+  evidence: "Compliance and Code of Ethics page states INSIGHTEC complies with AdvaMed's Code of Ethics"
+  source: https://insightec.com/compliance-ethics/
+- id: medtech-europe-code-of-ethical-business-practice
+  conforms: true
+  evidence: "Compliance and Code of Ethics page states INSIGHTEC complies with the MedTech Europe Code"
+  source: https://insightec.com/compliance-ethics/
+- id: ethics-hotline
+  conforms: true
+  evidence: "Third-party ethics hotline published (insightec.ethicspoint.com, +1-844-739-3204), anonymous reporting, non-retaliation policy"
+  source: https://insightec.com/compliance-ethics/
+- id: oauth2
+  conforms: false
+  evidence: no public API or securityScheme published
+- id: openid-connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404 on every host probed
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no public API or error contract published
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on every host probed

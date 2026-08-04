@@ -1,0 +1,35 @@
+# Insightec
+
+> Insightec Ltd. is an Israeli medical device company (founded 1999, Tirat Carmel, Israel) that develops MR-guided focused ultrasound (MRgFUS) systems sold under the Exablate brand. Exablate Neuro focuses over a thousand ultrasound beams through the intact skull to ablate a target deep in the brain without an incision; it is approved for essential tremor and Parkinson's disease, including staged bilateral treatment. Exablate body systems treat uterine fibroids, bone-metastasis pain palliation, and prostate indications.
+
+## Important for agents
+
+Insightec publishes **no public API**. As of 2026-08-04 there is no developer portal, no API documentation, no OpenAPI/AsyncAPI/GraphQL contract, no SDKs or packages on any public registry, no MCP server, and no A2A agent card on any Insightec host. The Exablate systems integrate with GE and Siemens MR scanners as regulated clinical devices, not through a public web API. Do not attempt to construct API calls against Insightec hosts.
+
+The apex host insightec.com sits behind a Wordfence WAF that answers automated clients with HTTP 503; fetch it with a browser or expect to be blocked.
+
+## Company
+
+- [Insightec](https://insightec.com/): Corporate website
+- [About Us](https://insightec.com/about-us/): Mission, leadership, company background
+- [Newsroom and press releases](https://insightec.com/about-us/newsroom/): Regulatory approvals, clinical results, announcements
+- [Contact Us](https://insightec.com/contact-us/): Patient and healthcare-professional contact
+- [Careers](https://insightec.com/careers/): Open positions
+
+## Products and clinical documentation
+
+- [Exablate product documentation portal](https://documentation.insightec.com/): Operator manuals and handbooks for Exablate systems
+- [Healthcare professionals](https://insightec.com/healthcare-professionals/): Exablate procedure solutions
+
+## Governance and legal
+
+- [Compliance and Code of Ethics](https://insightec.com/compliance-ethics/): AdvaMed Code of Ethics, MedTech Europe Code, third-party ethics hotline
+- [Terms of Use](https://insightec.com/terms-of-use/)
+- [Privacy Policy](https://insightec.com/privacy-policy/)
+
+## API Evangelist profile artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/insightec/refs/heads/main/apis.yml): APIs.json 0.20 profile
+- [Well-known probe index](https://raw.githubusercontent.com/api-evangelist/insightec/refs/heads/main/well-known/insightec-well-known.yml): Every discovery path probed, with HTTP status
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/insightec/refs/heads/main/conformance/insightec-conformance.yml): Published compliance program
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/insightec/refs/heads/main/security/insightec-domain-security.yml): TLS/HSTS/DNSSEC/CAA/SPF/DMARC probe

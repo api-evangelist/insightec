@@ -1,7 +1,19 @@
 aid: insightec
 name: Insightec
-description: 'Insightec is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Insightec Ltd. is an Israeli medical device company, founded in 1999
+  and headquartered in Tirat Carmel, Israel, that develops and sells MR-guided focused
+  ultrasound (MRgFUS) systems under the Exablate brand. Its Exablate Neuro platform
+  focuses more than a thousand ultrasound beams through the intact skull to ablate
+  a target deep in the brain without an incision, and is approved for essential tremor
+  and Parkinson''s disease, including staged bilateral treatment. The Exablate body
+  platform is used for uterine fibroids, palliation of bone metastases, and prostate
+  indications, and the company runs clinical programs in blood-brain-barrier opening
+  and glioblastoma. Insightec publishes a public product documentation portal of operator
+  manuals and handbooks for the Exablate systems, but publishes no public developer
+  portal, API documentation, machine-readable API contract, SDKs, or agent surface;
+  its systems integrate with GE and Siemens MR scanners as clinical devices rather
+  than through a public API.'
+image: https://documentation.insightec.com/wp-content/uploads/logo-svg.svg
 url: https://raw.githubusercontent.com/api-evangelist/insightec/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +24,13 @@ created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
+- Medical Devices
+- Healthcare
+- Medical Imaging
+- Focused Ultrasound
+- Neurology
+- Health Technology
+- Israel
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,35 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/insightec-domain-security.yml
 - type: Website
+  url: https://insightec.com/
+- type: ProductDocumentation
+  name: Exablate product documentation portal (operator manuals, handbooks)
+  url: https://documentation.insightec.com/
+- type: Blog
+  name: Newsroom and press releases
+  url: https://insightec.com/about-us/newsroom/
+- type: Support
+  name: Contact us
+  url: https://insightec.com/contact-us/
+- type: Compliance
+  name: Compliance and Code of Ethics (AdvaMed Code, MedTech Europe Code, ethics hotline)
+  url: https://insightec.com/compliance-ethics/
+- type: TermsOfService
+  url: https://insightec.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://insightec.com/privacy-policy/
+- type: InvestorProfile
+  name: Forge Global secondary-market profile
   url: https://forgeglobal.com/insightec_stock/
+- type: Conformance
+  url: conformance/insightec-conformance.yml
+- type: LLMsTxt
+  url: llms/insightec-llms.txt
+x-enrichment:
+  date: '2026-08-04'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1

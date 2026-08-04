@@ -1,0 +1,62 @@
+generated: '2026-08-04'
+method: probed
+source: live probes of every Insightec host reachable from apis.yml
+note: >-
+  No /.well-known/ discovery document is published on any Insightec host. The
+  apex host (insightec.com / www.insightec.com) is behind a Wordfence WAF that
+  answers automated clients with HTTP 503 ("Your access to this site has been
+  limited by the site owner"), so those rows record the WAF response rather than
+  a confirmed absence; the documentation portal answers a clean 404 for every
+  path. Recorded so a later round does not re-probe blindly.
+hosts:
+- host: https://insightec.com
+  note: Wordfence WAF returns 503 to non-browser clients
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://documentation.insightec.com
+  note: WordPress product documentation portal
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+  - {path: /robots.txt, status: 200}
+- host: https://portal.insightec.com
+  note: third-party hosted portal (CNAME insightec.gpcloudservice.com), not an API surface
+  documents:
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+contract_discovery:
+  openapi: none
+  graphql: none
+  mcp: none
+  agent_card: none
+  asyncapi: none
+  paths_probed:
+  - /openapi.json
+  - /openapi.yaml
+  - /swagger.json
+  - /api-docs
+  - /wp-json/
+  incidental_surface:
+    host: https://documentation.insightec.com
+    path: /wp-json/
+    status: 200
+    kind: WordPress core REST API
+    namespaces: [oembed/1.0, wordfence/v1, filebird/v1, filebird/public/v1, wp-mail-smtp/v1, wp/v2, wp-site-health/v1, wp-block-editor/v1]
+    note: >-
+      Incidental CMS infrastructure exposed by the documentation portal's
+      WordPress install. Not a product API, not documented by Insightec, and
+      deliberately NOT registered as an API in apis.yml.
