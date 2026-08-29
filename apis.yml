@@ -13,6 +13,17 @@ description: 'Insightec Ltd. is an Israeli medical device company, founded in 19
   portal, API documentation, machine-readable API contract, SDKs, or agent surface;
   its systems integrate with GE and Siemens MR scanners as clinical devices rather
   than through a public API.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://documentation.insightec.com/wp-content/uploads/logo-svg.svg
 url: https://raw.githubusercontent.com/api-evangelist/insightec/refs/heads/main/apis.yml
 x-type: company
